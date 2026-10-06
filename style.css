@@ -1,0 +1,542 @@
+/* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+/* RESET CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fonte-destaque: "Fredoka", sans-serif;
+    --fonte-texto: "Nunito", sans-serif;
+
+    --cor-primaria: #D97757;
+    --cor-secundaria: #A3BCF9;
+    --cor-texto-azul: #26334A;
+    --cor-texto-marrom: #8F5544;
+    --cor-fundo: #e3ddd6;
+    --cor-destaque: #F2B49E;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-azul);
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: var(--cor-fundo);
+    box-shadow: 0 0 10px var(--cor-fundo);
+    padding: 0 3vw;
+}
+
+header .logo-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo-titulo figure {
+    height: 10vh;
+}
+
+header .logo-titulo figure img {
+    object-fit: cover;
+    height: 100%;
+}
+
+header .logo-titulo h1 {
+    font-family: var(--fonte-destaque);
+    color: var(--cor-texto-azul);
+    font-size: 3rem;
+    padding-left: 1vw;
+    font-weight: 500;
+}
+
+header nav {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav a {
+    font-size: 1.5rem;
+    font-family: var(--fonte-destaque);
+    color: var(--cor-texto-azul);
+}
+
+header nav a:hover {
+    color: var(--cor-primaria);
+}
+
+
+/* MAIN */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ------------------------------------------------------------ */
+/* SESSÃO DESTAQUE */
+
+.hero-section {
+    margin-top: 10vh;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 5vh;
+
+    background-image: url(img/foto-fundo-t.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-section .texto {
+    height: 40vh;
+    width: 50vw;
+    background-color: #F2B49Eac;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-section .texto h2 {
+    font-family: var(--fonte-destaque);
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--cor-texto-azul);
+}
+
+.hero-section .texto p {
+    margin-top: 10px;
+    font-family: var(--fonte-texto);
+    font-size: 1.5rem;
+    color: var(--cor-texto-marrom);
+}
+
+
+/* ------------------------------------------------------------ */
+/* SESSÃO BIOGRAFIA */
+
+.biografia {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    padding: 10vh 4.5vw;
+    background-color: var(--cor-fundo);
+}
+
+
+/* LADO ESQUERDO */
+.biografia-esquerda {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.foto-autora {
+    width: 100%;
+    height: 58vh;
+    overflow: hidden;
+    background-color: var(--cor-primaria);
+}
+
+.foto-autora img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.informacoes-autora {
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    margin-top: 25px;
+    background-color: var(--cor-primaria);
+}
+
+.informacao {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid var(--cor-fundo);
+}
+
+.informacao:last-child {
+    border-right: none;
+}
+
+.informacao h3 {
+    margin-bottom: 8px;
+    font-family: var(--fonte-destaque);
+    font-size: 25px;
+    color: white;
+}
+
+.informacao p {
+    font-family: var(--fonte-texto);
+    font-size: 17px;
+    line-height: 1.4;
+    color: white;
+}
+
+
+/* TEXTO DA BIOGRAFIA */
+.biografia-texto {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.biografia-texto > h2 {
+    margin-bottom: 5px;
+    font-family: var(--fonte-destaque);
+    font-size: 2.7rem;
+    font-weight: 500;
+    color: var(--cor-texto-marrom);
+}
+
+.texto-biografia {
+    padding: 20px 22px;
+    background-color: var(--cor-destaque);
+    border-radius: 25px;
+}
+
+.texto-biografia p {
+    font-family: var(--fonte-texto);
+    font-size: 1.7rem;
+    line-height: 1.4;
+    color: var(--cor-texto-azul);
+}
+
+
+/* ------------------------------------------------------------ */
+/* SESSÃO OBRAS */
+
+.obras {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10vh 5vw;
+    background-color: var(--cor-secundaria);
+}
+
+.obras-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.card {
+    width: 25%;
+    padding: 30px;
+    border-top: 6px solid var(--cor-primaria);
+    border-radius: 20px;
+    background-color: var(--cor-destaque);
+    min-height: 25rem;
+}
+.card img {
+    width: 100%;
+}
+
+.card > span {
+    font-family: var(--fonte-destaque);
+    font-size: 2.5rem;
+    color: var(--cor-texto-marrom);
+}
+
+.card h3 {
+    margin-top: 15px;
+    font-family: var(--fonte-destaque);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--cor-texto-azul);
+}
+.card h4 {
+    font-size: 1.4rem;
+    font-family: var(--fonte-destaque);
+    font-weight: 400;
+}
+
+.card p {
+    margin-top: 10px;
+    font-family: var(--fonte-texto);
+    line-height: 1.5;
+    color: var(--cor-texto-azul);
+}
+
+/* ------------------------------------------------------------ */
+/* SESSÃO TRAJETÓRIA */
+.trajetoria {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10vh 8vw;
+    background-color: var(--cor-fundo);
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-secao h2 {
+    font-family: var(--fonte-destaque);
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--cor-texto-azul);
+}
+
+.titulo-secao p {
+    margin-top: 8px;
+    font-family: var(--fonte-texto);
+    font-size: 1.2rem;
+    color: var(--cor-texto-marrom);
+}
+
+.linha-do-tempo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.momento {
+    width: 30%;
+    padding: 30px;
+    border-top: 6px solid var(--cor-primaria);
+    border-radius: 20px;
+    background-color: var(--cor-destaque);
+}
+
+.momento > span {
+    font-family: var(--fonte-destaque);
+    font-size: 2.5rem;
+    color: var(--cor-texto-marrom);
+}
+
+.momento h3 {
+    margin-top: 15px;
+    font-family: var(--fonte-destaque);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--cor-texto-azul);
+}
+
+.momento p {
+    margin-top: 10px;
+    font-family: var(--fonte-texto);
+    line-height: 1.5;
+    color: var(--cor-texto-azul);
+}
+
+/* ------------------------------------------------------------ */
+/* FOOTER */
+
+footer {
+    padding: 45px 8vw 25px;
+    background-color: var(--cor-texto-azul);
+    color: var(--cor-fundo);
+}
+
+.footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-conteudo h2 {
+    font-family: var(--fonte-destaque);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.footer-conteudo p {
+    width: 35%;
+    font-family: var(--fonte-texto);
+    line-height: 1.5;
+}
+
+.footer-conteudo nav {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-conteudo nav a {
+    font-family: var(--fonte-texto);
+    color: var(--cor-fundo);
+}
+
+.footer-conteudo nav a:hover {
+    color: var(--cor-destaque);
+}
+
+.copyright {
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: var(--fonte-texto);
+    font-size: 0.9rem;
+    border-top: 1px solid #e3ddd655;
+}
+
+
+/* ------------------------------------------------------------ */
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    header .logo-titulo h1 {
+        font-size: 2rem;
+    }
+
+    header nav {
+        width: 45%;
+    }
+
+    header nav a {
+        font-size: 1.1rem;
+    }
+
+    .biografia {
+        flex-direction: column;
+        padding: 12vh 7vw;
+    }
+
+    .biografia-esquerda,
+    .biografia-texto {
+        width: 100%;
+    }
+
+    .foto-autora {
+        height: 45vh;
+    }
+
+    .informacoes-autora {
+        height: 15vh;
+    }
+
+    .lista-obras,
+    .linha-do-tempo {
+        flex-wrap: wrap;
+    }
+
+    .obra,
+    .momento {
+        width: 45%;
+    }
+
+    .footer-conteudo {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-conteudo p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        height: 8vh;
+    }
+
+    header .logo-titulo figure {
+        height: 8vh;
+    }
+
+    header .logo-titulo h1 {
+        display: none;
+    }
+
+    header nav {
+        width: 70%;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+    }
+
+    .hero-section {
+        margin-top: 8vh;
+        height: 92vh;
+    }
+
+    .hero-section .texto {
+        width: 85vw;
+        height: 30vh;
+        text-align: center;
+    }
+
+    .hero-section .texto h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section .texto p {
+        font-size: 1rem;
+    }
+
+    .biografia {
+        padding: 12vh 6vw;
+    }
+
+    .biografia-texto > h2 {
+        font-size: 2rem;
+    }
+
+    .texto-biografia p {
+        font-size: 1rem;
+    }
+
+    .lista-obras,
+    .linha-do-tempo {
+        flex-direction: column;
+    }
+
+    .obra,
+    .momento {
+        width: 100%;
+    }
+
+    .capa-obra {
+        height: 45vh;
+    }
+}
