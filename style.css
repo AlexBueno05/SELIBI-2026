@@ -1,8 +1,11 @@
-/* FONTES */
+/* ============================================================
+   FONTES
+   ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-
-/* RESET CSS */
+/* ============================================================
+   RESET CSS
+   ============================================================ */
 * {
     padding: 0;
     margin: 0;
@@ -14,15 +17,19 @@ html {
 }
 
 :root {
+    /* FONTES */
     --fonte-destaque: "Fredoka", sans-serif;
     --fonte-texto: "Nunito", sans-serif;
-
-    --cor-primaria: #D97757;
-    --cor-secundaria: #A3BCF9;
+    /* CORES */
+    --cor-primaria: #F45B8A;
+    --cor-secundaria: #B8DDE8;
     --cor-texto-azul: #26334A;
-    --cor-texto-marrom: #8F5544;
-    --cor-fundo: #e3ddd6;
-    --cor-destaque: #F2B49E;
+    --cor-texto-marrom: #7C5CFC;
+    --cor-fundo: #FFF8F3;
+    --cor-destaque: #FFE1EA;
+    /* CORES EXTRAS */
+    --cor-amarelo: #FFD166;
+    --cor-roxo: #7C5CFC;
 }
 
 a {
@@ -34,8 +41,10 @@ body {
     color: var(--cor-texto-azul);
 }
 
+/* ============================================================
+   HEADER
+   ============================================================ */
 
-/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
@@ -46,7 +55,7 @@ header {
     top: 0;
     z-index: 10;
     background-color: var(--cor-fundo);
-    box-shadow: 0 0 10px var(--cor-fundo);
+    box-shadow: 0 0 15px rgba(38, 51, 74, 0.12);
     padding: 0 3vw;
 }
 
@@ -84,23 +93,26 @@ header nav a {
     font-size: 1.5rem;
     font-family: var(--fonte-destaque);
     color: var(--cor-texto-azul);
+    transition: 0.3s;
 }
 
 header nav a:hover {
     color: var(--cor-primaria);
 }
 
+/* ============================================================
+   MAIN
+   ============================================================ */
 
-/* MAIN */
 main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-
-/* ------------------------------------------------------------ */
-/* SESSÃO DESTAQUE */
+/* ============================================================
+   SESSÃO DESTAQUE / HERO
+   ============================================================ */
 
 .hero-section {
     margin-top: 10vh;
@@ -110,7 +122,6 @@ main {
     justify-content: center;
     align-items: end;
     padding-bottom: 5vh;
-
     background-image: url(img/foto-fundo-t.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -120,31 +131,35 @@ main {
 .hero-section .texto {
     height: 40vh;
     width: 50vw;
-    background-color: #F2B49Eac;
+    background-color: rgba(244, 91, 138, 0.82);
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(38, 51, 74, 0.18);
 }
 
 .hero-section .texto h2 {
     font-family: var(--fonte-destaque);
     font-size: 4rem;
     font-weight: 500;
-    color: var(--cor-texto-azul);
+    color: white;
+    text-align: center;
 }
 
 .hero-section .texto p {
     margin-top: 10px;
     font-family: var(--fonte-texto);
     font-size: 1.5rem;
-    color: var(--cor-texto-marrom);
+    color: white;
+    text-align: center;
 }
 
-
-/* ------------------------------------------------------------ */
-/* SESSÃO BIOGRAFIA */
+/* ============================================================
+   SESSÃO BIOGRAFIA
+   ============================================================ */
 
 .biografia {
     min-height: 100vh;
@@ -155,8 +170,8 @@ main {
     background-color: var(--cor-fundo);
 }
 
-
 /* LADO ESQUERDO */
+
 .biografia-esquerda {
     width: 32%;
     display: flex;
@@ -169,12 +184,18 @@ main {
     height: 58vh;
     overflow: hidden;
     background-color: var(--cor-primaria);
+    border-radius: 25px;
 }
 
 .foto-autora img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.4s;
+}
+
+.foto-autora:hover img {
+    transform: scale(1.03);
 }
 
 .informacoes-autora {
@@ -183,6 +204,8 @@ main {
     display: flex;
     margin-top: 25px;
     background-color: var(--cor-primaria);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .informacao {
@@ -193,7 +216,7 @@ main {
     justify-content: start;
     padding: 10px;
     text-align: center;
-    border-right: 1px solid var(--cor-fundo);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .informacao:last-child {
@@ -214,8 +237,8 @@ main {
     color: white;
 }
 
-
 /* TEXTO DA BIOGRAFIA */
+
 .biografia-texto {
     width: 60%;
     display: flex;
@@ -228,13 +251,14 @@ main {
     font-family: var(--fonte-destaque);
     font-size: 2.7rem;
     font-weight: 500;
-    color: var(--cor-texto-marrom);
+    color: var(--cor-roxo);
 }
 
 .texto-biografia {
     padding: 20px 22px;
     background-color: var(--cor-destaque);
     border-radius: 25px;
+    border-left: 6px solid var(--cor-primaria);
 }
 
 .texto-biografia p {
@@ -244,9 +268,9 @@ main {
     color: var(--cor-texto-azul);
 }
 
-
-/* ------------------------------------------------------------ */
-/* SESSÃO OBRAS */
+/* ============================================================
+   SESSÃO OBRAS
+   ============================================================ */
 
 .obras {
     min-height: 100vh;
@@ -271,15 +295,24 @@ main {
     border-radius: 20px;
     background-color: var(--cor-destaque);
     min-height: 25rem;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(38, 51, 74, 0.08);
 }
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(38, 51, 74, 0.15);
+}
+
 .card img {
     width: 100%;
+    border-radius: 10px;
 }
 
 .card > span {
     font-family: var(--fonte-destaque);
     font-size: 2.5rem;
-    color: var(--cor-texto-marrom);
+    color: var(--cor-roxo);
 }
 
 .card h3 {
@@ -289,10 +322,12 @@ main {
     font-weight: 500;
     color: var(--cor-texto-azul);
 }
+
 .card h4 {
     font-size: 1.4rem;
     font-family: var(--fonte-destaque);
     font-weight: 400;
+    color: var(--cor-primaria);
 }
 
 .card p {
@@ -302,8 +337,10 @@ main {
     color: var(--cor-texto-azul);
 }
 
-/* ------------------------------------------------------------ */
-/* SESSÃO TRAJETÓRIA */
+/* ============================================================
+   SESSÃO TRAJETÓRIA
+   ============================================================ */
+
 .trajetoria {
     min-height: 100vh;
     display: flex;
@@ -329,7 +366,7 @@ main {
     margin-top: 8px;
     font-family: var(--fonte-texto);
     font-size: 1.2rem;
-    color: var(--cor-texto-marrom);
+    color: var(--cor-roxo);
 }
 
 .linha-do-tempo {
@@ -344,12 +381,18 @@ main {
     border-top: 6px solid var(--cor-primaria);
     border-radius: 20px;
     background-color: var(--cor-destaque);
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(38, 51, 74, 0.08);
+}
+
+.momento:hover {
+    transform: translateY(-8px);
 }
 
 .momento > span {
     font-family: var(--fonte-destaque);
     font-size: 2.5rem;
-    color: var(--cor-texto-marrom);
+    color: var(--cor-roxo);
 }
 
 .momento h3 {
@@ -367,8 +410,9 @@ main {
     color: var(--cor-texto-azul);
 }
 
-/* ------------------------------------------------------------ */
-/* FOOTER */
+/* ============================================================
+   FOOTER
+   ============================================================ */
 
 footer {
     padding: 45px 8vw 25px;
@@ -402,10 +446,11 @@ footer {
 .footer-conteudo nav a {
     font-family: var(--fonte-texto);
     color: var(--cor-fundo);
+    transition: 0.3s;
 }
 
 .footer-conteudo nav a:hover {
-    color: var(--cor-destaque);
+    color: var(--cor-primaria);
 }
 
 .copyright {
@@ -414,14 +459,17 @@ footer {
     text-align: center;
     font-family: var(--fonte-texto);
     font-size: 0.9rem;
-    border-top: 1px solid #e3ddd655;
+    border-top: 1px solid rgba(255, 248, 243, 0.35);
 }
 
-
-/* ------------------------------------------------------------ */
-/* RESPONSIVIDADE */
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
 
 @media (max-width: 900px) {
+
+    /* HEADER */
+
     header .logo-titulo h1 {
         font-size: 2rem;
     }
@@ -433,6 +481,8 @@ footer {
     header nav a {
         font-size: 1.1rem;
     }
+
+    /* BIOGRAFIA */
 
     .biografia {
         flex-direction: column;
@@ -452,15 +502,32 @@ footer {
         height: 15vh;
     }
 
-    .lista-obras,
+    /* OBRAS */
+
+    .obras {
+        padding: 12vh 7vw;
+    }
+
+    .obras-cards {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    /* TRAJETÓRIA */
+
     .linha-do-tempo {
         flex-wrap: wrap;
     }
 
-    .obra,
     .momento {
         width: 45%;
     }
+
+    /* FOOTER */
 
     .footer-conteudo {
         flex-direction: column;
@@ -474,6 +541,8 @@ footer {
 }
 
 @media (max-width: 600px) {
+
+    /* HEADER */
 
     header {
         height: 8vh;
@@ -495,6 +564,8 @@ footer {
         font-size: 0.9rem;
     }
 
+    /* HERO */
+
     .hero-section {
         margin-top: 8vh;
         height: 92vh;
@@ -504,6 +575,7 @@ footer {
         width: 85vw;
         height: 30vh;
         text-align: center;
+        border-radius: 30px;
     }
 
     .hero-section .texto h2 {
@@ -513,6 +585,8 @@ footer {
     .hero-section .texto p {
         font-size: 1rem;
     }
+
+    /* BIOGRAFIA */
 
     .biografia {
         padding: 12vh 6vw;
@@ -526,17 +600,76 @@ footer {
         font-size: 1rem;
     }
 
-    .lista-obras,
-    .linha-do-tempo {
-        flex-direction: column;
+    .foto-autora {
+        height: 40vh;
     }
 
-    .obra,
+    .informacoes-autora {
+        height: auto;
+    }
+
+    .informacao {
+        padding: 8px 5px;
+    }
+
+    .informacao h3 {
+        font-size: 18px;
+    }
+
+    .informacao p {
+        font-size: 13px;
+    }
+
+    /* OBRAS */
+
+    .obras {
+        padding: 12vh 6vw;
+    }
+
+    .obras-cards {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .card {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .card > span {
+        font-size: 2rem;
+    }
+
+    .card h3 {
+        font-size: 1.4rem;
+    }
+
+    .card h4 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+
+    /* TRAJETÓRIA */
+
+    .linha-do-tempo {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
     .momento {
         width: 100%;
     }
 
-    .capa-obra {
-        height: 45vh;
+    /* FOOTER */
+
+    footer {
+        padding: 35px 6vw 20px;
+    }
+
+    .footer-conteudo nav {
+        gap: 15px;
     }
 }
